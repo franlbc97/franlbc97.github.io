@@ -1,6 +1,6 @@
 ---
 categories:
-  - programación
+  - programming
 tags:
   - árboles binarios
   - EDA
