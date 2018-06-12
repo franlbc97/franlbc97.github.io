@@ -5,4 +5,5 @@ permalink: /programming/
 collection: programming
 entries_layout: grid
 classes: wide
+author_profile: true
 ---
