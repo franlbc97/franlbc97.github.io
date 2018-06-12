@@ -1,8 +1,8 @@
 ---
 categories:
-  - Programación
+  - programación
 tags:
-  - Árboles binarios
+  - árboles binarios
   - EDA
 ---
 # Construimos un AABB a partir del inorden y el postorden

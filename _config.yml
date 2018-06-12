@@ -257,7 +257,7 @@ compress_html:
     envs: development
 
 collections:
-  portfolio:
+  programación:
     output: true
     permalink: /:collection/:path/
 # Defaults
