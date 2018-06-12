@@ -273,3 +273,14 @@ defaults:
       comments: # true
       share: true
       related: true
+  # programming
+  - scope:
+      path: ""
+      type: programming
+    values:
+      layout: single
+      author_profile: true
+      read_time: false
+      comments: # true
+      share: true
+      related: false
