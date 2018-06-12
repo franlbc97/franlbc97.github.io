@@ -93,7 +93,13 @@ Con esto ya podriamos hacer un árbol binario de enteros. Lo que vendría siendo
   /// @param inStr: índice del recorrido postorden
   /// @return Nodo resultante
 */
-SNode * Construye(std::vector<int> & post,std::vector<int> & in, int inStr,int inEnd, int & postIndex )
+SNode * Construye(
+  std::vector<int> & post,
+  std::vector<int> & in,
+  int inStr,
+  int inEnd,
+  int & postIndex
+  )
 ```
 Primero tenemos que hacer los casos base, que es, si no hay donde buscar, es decir `inStr > inEnd`:
 ```
@@ -123,16 +129,20 @@ return node;
 
 La función completa sería:
 ```
-SNode * Construye(std::vector<int> & post,std::vector<int> & in, int inStr,int inEnd, int & postIndex ){
+SNode * Construye(std::vector<int> & post,std::vector<int> & in, int inStr,int inEnd, int & postIndex )
+{
   if(inStr > inEnd)
     return nullptr;
-
-  if(inStr==inEnd)
-    return node;
   SNode * node = initNode(post[postIndex]);
   postIndex--;
+  if(inStr==inEnd)
+    return node;
+
   int index = busca(in,inStr,inEnd,node->valor);
 
+  node->right = Construye(post, in, index+1, inEnd, postIndex);
+  node->left  = Construye(post, in, inStr, index-1, postIndex);
+  return node;
 }
 
 ```
